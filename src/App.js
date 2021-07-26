@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const[ inputList , setinputList ]= useState("");
+ const itemEvent = (e) => {
+  setinputList(e.target.value)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main-div">
+        <div className="center-div">
+          <br />
+          <h1>ToDo List</h1>
+          <br />
+          <input type="text" onChange={itemEvent} placeholder=" Add a Items" />
+          <button> + </button>
+
+          <ol>
+            {" "}
+            <li>{inputList}</li>
+          </ol>
+        </div>
+      </div>
+    </>
   );
 }
 
