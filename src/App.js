@@ -1,11 +1,29 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-
+import ToDoList from "./Components/ToDoList";
 function App() {
-  const[ inputList , setinputList ]= useState("");
- const itemEvent = (e) => {
-  setinputList(e.target.value)
+  const [inputList, setinputList] = useState("");
+  const [items, setItems] = useState([]);
+
+  const itemEvent = (e) => {
+    setinputList(e.target.value);
+  };
+
+  const addData = () => {
+    setItems((oldItems) => {
+      return [...oldItems, inputList];
+    });
+    setinputList(" ");
+  };
+
+  const deleteItems = (id)=> {
+        // console.log("dddddddd")
+        setItems((oldItems)=>{
+        return oldItems.filter((arrElem, index)=> {
+          return index !== id;
+        })
+  })
   }
   return (
     <>
@@ -14,12 +32,20 @@ function App() {
           <br />
           <h1>ToDo List</h1>
           <br />
-          <input type="text" onChange={itemEvent} placeholder=" Add a Items" />
-          <button> + </button>
+          <input
+            type="text"
+            value={inputList}
+            onChange={itemEvent}
+            placeholder=" Add a Items"
+          />
+          <button onClick={addData}> + </button>
 
           <ol>
             {" "}
-            <li>{inputList}</li>
+            {/* <li>{inputList}</li> */}
+            {items.map((itemValue, index) => {
+              return <ToDoList key={index} id={index} onSelect={deleteItems} text={itemValue} />;
+            })}
           </ol>
         </div>
       </div>
