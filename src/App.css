@@ -22,7 +22,7 @@
 h1 {
   color: rgb(255, 249, 249);
   background: transparent;
-  background-color: #8566aa;
+  background-color: #760cf8;
   padding: 6px 0 2px 0;
   margin-bottom: 10px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
@@ -37,7 +37,7 @@ input {
   font-size: 20px;
   font-weight: 500px;
   width: 60%;
-  border-bottom: 2px solid #8566aa;
+  border-bottom: 2px solid #760cf8;
   outline: none;
 }
 button {
@@ -45,7 +45,7 @@ button {
   width: 40px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #8566aa;
+  background-color: #760cf8;
   color: #fff;
   border: none;
   outline: none;
@@ -66,7 +66,7 @@ ol li{
   min-height: 40px;
   display: flex;
   align-items: center;
-  color: #8566aa;
+  color: #760cf8;
   text-transform: capitalize;
 }
 
@@ -82,7 +82,7 @@ ol li{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8566aa;
+  background-color: #760cf8;
   border-radius: 50%;
   margin: 0 15px 0 35px ;
   color: aliceblue;
