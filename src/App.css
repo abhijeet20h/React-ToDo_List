@@ -15,9 +15,10 @@
 }
 .center-div {
   width: 50vh;
-  height: 80vh;
+  height: 70vh;
   background-color: rgb(228, 220, 220);
   border-radius: 15px;
+  border: 2px dotted gray;
 }
 h1 {
   color: rgb(255, 249, 249);
@@ -93,3 +94,4 @@ ol li{
 .todo-style .fa-times:hover {
   background-color: crimson;
 }
+
